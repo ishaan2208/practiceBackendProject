@@ -19,4 +19,12 @@ app.use(urlencoded({ extended: true }));
 
 app.use(express.static("public"));
 
+
+//import routes
+import userRoutes from "./routes/user.routes.js";
+
+//routes declaration
+
+app.use("/api/v1/users", userRoutes);
+
 export default app;
